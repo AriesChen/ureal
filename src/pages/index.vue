@@ -1,17 +1,13 @@
 <template>
-
+  <div>
+    44444
+  </div>
 </template>
 
-<script type="text/ecmascript-6">
-  import indexHeader from 'components/indexHeader';
-  import SysHeader from 'components/header/header';
+<script type="text/ecmascript-6" >
   export default {
-    components: {
-      indexHeader,
-      SysHeader
-    }
   };
 </script>
 
-<style scoped>
+<style>
 </style>
