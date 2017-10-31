@@ -1,0 +1,9 @@
+@import '~iview/src/styles/index.less';
+
+// Color
+@primary-color: #E84E4A;
+
+// Base
+@body-background: #fff;
+@font-family: "Source Han Sans CN","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+@code-family: Consolas,Menlo,Courier,monospace;

@@ -3,14 +3,21 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+import iView from 'iview';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'iview/dist/styles/iview.css';
+import 'swiper/dist/css/swiper.css';
+// import 'assets/styles/myTheme';
 import App from './App';
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(iView);
+Vue.use(VueAwesomeSwiper);
 
 const routes = [
-  // {path: '/', redirect: '/pages/index'}
-  // {path: '/index', component: resolve => require(['pages/index'], resolve)}
+  {path: '/', redirect: '/index'},
+  {path: '/index', component: resolve => require(['pages/index/index'], resolve)}
 ];
 const router = new VueRouter({
   mode: 'history',

@@ -7,8 +7,8 @@
 </template>
 
 <script type="text/ecmascript-6">
-import pageHeader from 'components/header';
-import pageFooter from 'components/footer';
+import pageHeader from 'components/header/header';
+import pageFooter from 'components/footer/footer';
 export default {
   components: {
     pageHeader,
