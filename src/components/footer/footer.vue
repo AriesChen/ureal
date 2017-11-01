@@ -7,7 +7,7 @@
             <span class="titleText">联系方式</span>
           </Col>
         </Row>
-        <Row type="flex" justify="start" class="contact">
+        <Row type="flex" class="contact">
           <Col span="24">
             邮件联系：sales@ureal.cn     &nbsp;&nbsp;|&nbsp;&nbsp;
             联系电话：021-54171123       &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -17,7 +17,7 @@
           </Col>
         </Row>
         <div class="line"></div>
-        <Row type="flex" justify="left" align="top" class="code-row-bg" style="margin-left: 30px">
+        <Row type="flex" align="top" class="code-row-bg" style="margin-left: 30px">
           <Col span="3">
             <ul class="allMenu">
               <li>&nbsp;&nbsp;悦瑞三维</li>

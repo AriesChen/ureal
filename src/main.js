@@ -17,7 +17,8 @@ Vue.use(VueAwesomeSwiper);
 
 const routes = [
   {path: '/', redirect: '/index'},
-  {path: '/index', component: resolve => require(['pages/index/index'], resolve)}
+  {path: '/index', component: resolve => require(['pages/index/index'], resolve)},
+  {path: '/ureal3D', component: resolve => require(['pages/ureal3D/ureal3D'], resolve)}
 ];
 const router = new VueRouter({
   mode: 'history',

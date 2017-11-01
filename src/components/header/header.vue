@@ -5,18 +5,20 @@
         <img src="./img/logo.png" style="width: 156px;height: 21px">
       </div>
       <div class="menu">
-        <div class="item" :class="{activeItem:showMenu1}"
+        <div class="item" :class="{activeItem:showMenu1, isActive:active.ureal3D}"
+             @click.stop.prevent="selectRouter('index', '')"
              @mouseover="toggleMenu('showMenu1')" @mouseout="toggleMenu('showMenu1')">悦瑞三维
           <div :class="{subItems:showMenu1}">
             <div v-if="showMenu1" class="subContent">
-              <div class="subMenu">公司简介</div>
-              <div class="subMenu">发展轨迹</div>
-              <div class="subMenu">企业理念</div>
-              <div class="subMenu">领导关怀</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('ureal3D', 1)">公司简介</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('ureal3D', 2)">发展轨迹</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('ureal3D', 3)">企业理念</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('ureal3D', 4)">领导关怀</div>
             </div>
           </div>
         </div>
-        <div class="item" :class="{activeItem:showMenu2}"
+        <div class="item" :class="{activeItem:showMenu2, isActive:active.device}"
+             @click="selectRouter('device', 1)"
              @mouseover="toggleMenu('showMenu2')" @mouseout="toggleMenu('showMenu2')">3D打印设备
           <div :class="{subItems:showMenu2,marginL_92:showMenu2}" >
             <div v-if="showMenu2" class="subContent">
@@ -28,7 +30,8 @@
             </div>
           </div>
         </div>
-        <div class="item" :class="{activeItem:showMenu3}"
+        <div class="item" :class="{activeItem:showMenu3, isActive:active.service}"
+             @click.stop.prevent="selectRouter('service', 1)"
              @mouseover="toggleMenu('showMenu3')" @mouseout="toggleMenu('showMenu3')">3D打印服务
           <div :class="{subItems:showMenu3,marginL_92:showMenu3}" >
             <div v-if="showMenu3" class="subContent">
@@ -40,7 +43,8 @@
             </div>
           </div>
         </div>
-        <div class="item" :class="{activeItem:showMenu4}"
+        <div class="item" :class="{activeItem:showMenu4, isActive:active.material}"
+             @click.stop.prevent="selectRouter('material', 1)"
              @mouseover="toggleMenu('showMenu4')" @mouseout="toggleMenu('showMenu4')">3D打印材料
           <div :class="{subItems:showMenu4,marginL_92:showMenu4}" >
             <div v-if="showMenu4" class="subContent">
@@ -49,7 +53,8 @@
             </div>
           </div>
         </div>
-        <div class="item" :class="{activeItem:showMenu5}"
+        <div class="item" :class="{activeItem:showMenu5, isActive:active.appCase}"
+             @click.stop.prevent="selectRouter('appCase', 1)"
              @mouseover="toggleMenu('showMenu5')" @mouseout="toggleMenu('showMenu5')">应用与案例
           <div :class="{subItems:showMenu5,marginL_92:showMenu5}" >
             <div v-if="showMenu5" class="subContent">
@@ -63,7 +68,8 @@
             </div>
           </div>
         </div>
-        <div class="item" :class="{activeItem:showMenu6}"
+        <div class="item" :class="{activeItem:showMenu6, isActive:active.SC}"
+             @click.stop.prevent="selectRouter('SC', 1)"
              @mouseover="toggleMenu('showMenu6')" @mouseout="toggleMenu('showMenu6')">服务客户
           <div :class="{subItems:showMenu6}" >
               <div v-if="showMenu6" class="subContent">
@@ -72,7 +78,8 @@
             </div>
           </div>
         </div>
-        <div class="item" :class="{activeItem:showMenu7}"
+        <div class="item" :class="{activeItem:showMenu7, isActive:active.urealNews}"
+             @click.stop.prevent="selectRouter('urealNews', 1)"
              @mouseover="toggleMenu('showMenu7')" @mouseout="toggleMenu('showMenu7')">悦瑞新闻
           <div :class="{subItems:showMenu7}" >
             <div v-if="showMenu7" class="subContent">
@@ -80,8 +87,9 @@
               <div class="subMenu">知名客户</div>
             </div>
           </div>
-        </div><div class="item" :class="{activeItem:showMenu8}"
-                   @mouseover="toggleMenu('showMenu8')" @mouseout="toggleMenu('showMenu8')">联系我们
+        </div><div class="item" :class="{activeItem:showMenu8, isActive:active.contactUs}"
+             @click.stop.prevent="selectRouter('contactUs', 1)"
+             @mouseover="toggleMenu('showMenu8')" @mouseout="toggleMenu('showMenu8')">联系我们
         <div :class="{subItems:showMenu8}" >
           <div v-if="showMenu8" class="subContent">
             <div class="subMenu">联系我们</div>
@@ -105,12 +113,40 @@
         showMenu5: false,
         showMenu6: false,
         showMenu7: false,
-        showMenu8: false
+        showMenu8: false,
+        active: {
+          index: false,
+          device: false,
+          service: false,
+          material: false,
+          appCase: false,
+          SC: false,
+          urealNews: false,
+          contactUs: false
+        }
       };
     },
     methods: {
       toggleMenu(name) {
         this[name] = !this[name];
+      },
+      resetStat() {
+        for (let i in this.active) {
+          this.active[i] = false;
+        }
+      },
+      selectRouter(path, tab) {
+        this.resetStat();
+        this.active[path] = true;
+        if (tab) {
+          this.$router.push({path: `/${path}`, query: {page: tab}});
+        } else if (path === 'index') {
+          this.$router.push(path);
+          this.active[path] = false;
+        } else {
+          this.$router.push({path: `/${path}`, query: {page: 1}});
+        }
+        console.log(this.active);
       }
     }
   };
@@ -126,6 +162,7 @@
     color: #39475A;
     font-size: 16px;
     width: 100%;
+    border-bottom: 1px solid #f1f1f1;
   }
   .headerBody {
     width: 1150px;
@@ -169,7 +206,11 @@
   }
   .activeItem {
     background: #F1F1F1;
-    box-shadow: inset 0 3px 0 0 #E84E4A
+    box-shadow: inset 0 3px 0 0 #E84E4A;
+  }
+  .isActive {
+    background: #F1F1F1;
+    box-shadow: inset 0 3px 0 0 #E84E4A;
   }
   .subMenu {
     padding: 10px;
