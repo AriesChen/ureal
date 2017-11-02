@@ -1,0 +1,28 @@
+.detailBtn {
+  cursor: pointer;
+  font-size: 16px;
+  color: #566C89;
+  width: 116px;
+  padding: 5px 10px;
+  text-align: center;
+  border: 1px solid #D7DDE6;
+  border-radius: 3px;
+}
+.rightContent {
+  margin-top: 20px;
+  margin-left: 312px;
+}
+.profileTitle {
+  font-size: 36px;
+  color: #39475A;
+  margin: 20px 0;
+}
+.bread {
+  font-size: 14px;
+  color: #566C89;
+}
+.mainContent {
+  position: relative;
+  width: 1150px;
+  margin: auto;
+}

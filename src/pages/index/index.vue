@@ -284,16 +284,6 @@
     list-style: initial !important;
     line-height: 38px;
   }
-  .detailBtn {
-    cursor: pointer;
-    font-size: 16px;
-    color: #566C89;
-    width: 116px;
-    padding: 5px 10px;
-    text-align: center;
-    border: 1px solid #D7DDE6;
-    border-radius: 3px;
-  }
   .deviceText {
     font-size: 18px;
     color: #3B485A;
@@ -314,11 +304,6 @@
   }
   .tabText {
     font-size: 18px;
-  }
-  .mainContent {
-    position: relative;
-    width: 1150px;
-    margin: auto;
   }
   .swiperBanerZh {
     position: absolute;

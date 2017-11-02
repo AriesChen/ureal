@@ -22,11 +22,9 @@
              @mouseover="toggleMenu('showMenu2')" @mouseout="toggleMenu('showMenu2')">3D打印设备
           <div :class="{subItems:showMenu2,marginL_92:showMenu2}" >
             <div v-if="showMenu2" class="subContent">
-              <div class="subMenu">EOS设备</div>
-              <div class="subMenu">DMT设备</div>
-              <div class="subMenu">微打印设备</div>
-              <div class="subMenu">Envision TEC设备</div>
-              <div class="subMenu">HP设备</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('device', 1)">设备</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('device', 2)">解决方案</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('device', 3)">技术解说</div>
             </div>
           </div>
         </div>
@@ -35,11 +33,9 @@
              @mouseover="toggleMenu('showMenu3')" @mouseout="toggleMenu('showMenu3')">3D打印服务
           <div :class="{subItems:showMenu3,marginL_92:showMenu3}" >
             <div v-if="showMenu3" class="subContent">
-              <div class="subMenu">模具制造</div>
-              <div class="subMenu">快速样件</div>
-              <div class="subMenu">小批量生产</div>
-              <div class="subMenu">模型制作</div>
-              <div class="subMenu">服务流程</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('service', 1)">解决方案</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('service', 2)">服务流程与内容</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('service', 3)">应用与案例</div>
             </div>
           </div>
         </div>
@@ -48,23 +44,8 @@
              @mouseover="toggleMenu('showMenu4')" @mouseout="toggleMenu('showMenu4')">3D打印材料
           <div :class="{subItems:showMenu4,marginL_92:showMenu4}" >
             <div v-if="showMenu4" class="subContent">
-              <div class="subMenu">金属粉末材料</div>
-              <div class="subMenu">非金属粉末材料</div>
-            </div>
-          </div>
-        </div>
-        <div class="item" :class="{activeItem:showMenu5, isActive:active.appCase}"
-             @click.stop.prevent="selectRouter('appCase', 1)"
-             @mouseover="toggleMenu('showMenu5')" @mouseout="toggleMenu('showMenu5')">应用与案例
-          <div :class="{subItems:showMenu5,marginL_92:showMenu5}" >
-            <div v-if="showMenu5" class="subContent">
-              <div class="subMenu">汽车</div>
-              <div class="subMenu">模具</div>
-              <div class="subMenu">航天航空</div>
-              <div class="subMenu">医疗</div>
-              <div class="subMenu">个性化定制</div>
-              <div class="subMenu">创意产品</div>
-              <div class="subMenu">其他</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('material', 1)">金属粉末材料</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('material', 2)">非金属粉末材料</div>
             </div>
           </div>
         </div>
@@ -73,8 +54,8 @@
              @mouseover="toggleMenu('showMenu6')" @mouseout="toggleMenu('showMenu6')">服务客户
           <div :class="{subItems:showMenu6}" >
               <div v-if="showMenu6" class="subContent">
-              <div class="subMenu">合作伙伴</div>
-              <div class="subMenu">知名客户</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('SC', 1)">合作伙伴</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('SC', 2)">知名客户</div>
             </div>
           </div>
         </div>
@@ -83,11 +64,13 @@
              @mouseover="toggleMenu('showMenu7')" @mouseout="toggleMenu('showMenu7')">悦瑞新闻
           <div :class="{subItems:showMenu7}" >
             <div v-if="showMenu7" class="subContent">
-              <div class="subMenu">合作伙伴</div>
-              <div class="subMenu">知名客户</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('urealNews', 1)">公司新闻</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('urealNews', 2)">行业新闻</div>
+              <div class="subMenu" @click.stop.prevent="selectRouter('urealNews', 3)">市场活动</div>
             </div>
           </div>
-        </div><div class="item" :class="{activeItem:showMenu8, isActive:active.contactUs}"
+        </div>
+        <div class="item" :class="{activeItem:showMenu8, isActive:active.contactUs}"
              @click.stop.prevent="selectRouter('contactUs', 1)"
              @mouseover="toggleMenu('showMenu8')" @mouseout="toggleMenu('showMenu8')">联系我们
         <div :class="{subItems:showMenu8}" >
@@ -119,7 +102,6 @@
           device: false,
           service: false,
           material: false,
-          appCase: false,
           SC: false,
           urealNews: false,
           contactUs: false
@@ -146,7 +128,6 @@
         } else {
           this.$router.push({path: `/${path}`, query: {page: 1}});
         }
-        console.log(this.active);
       }
     }
   };
@@ -187,7 +168,7 @@
     height: 72px;
   }
   .subItems {
-    position: fixed;
+    position: absolute;
     margin-top: 72px;
     margin-left: -83px;
     z-index: 100;

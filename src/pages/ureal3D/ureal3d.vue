@@ -2,23 +2,9 @@
   <div>
     <img src="./bg.png" alt="" width="100%">
     <div class="mainContent">
-      <div class="leftMenu">
-        <div class="_active">悦瑞三维 </div>
-        <div class="subMenu" @click="switchTab(1)" :class="{isSelected:tabVal==1}">公司简介
-          <span class="rightIcon" :class="{activeIcon:tabVal==1}"><img src="static/img/right.png" alt=""></span>
-        </div>
-        <div class="subMenu" @click="switchTab(2)" :class="{isSelected:tabVal==2}">发展轨迹
-          <span class="rightIcon" :class="{activeIcon:tabVal==2}"><img src="static/img/right.png" alt=""></span>
-        </div>
-        <div class="subMenu" @click="switchTab(3)" :class="{isSelected:tabVal==3}">企业理念
-          <span class="rightIcon" :class="{activeIcon:tabVal==3}"><img src="static/img/right.png" alt=""></span>
-        </div>
-        <div class="subMenu" @click="switchTab(4)" :class="{isSelected:tabVal==4}">领导关怀
-          <span class="rightIcon" :class="{activeIcon:tabVal==4}"><img src="static/img/right.png" alt=""></span>
-        </div>
-      </div>
+      <left-menu :MenuList="MenuList"></left-menu>
       <div class="rightContent">
-        <div class="bread">悦瑞三维 / 公司简介</div>
+        <div class="bread">悦瑞三维 &nbsp;&nbsp;/&nbsp;&nbsp; <span class="subBread">{{subMenu}}</span></div>
         <div v-if="tabVal == 1">
           <div class="profileTitle">公司简介</div>
           <div class="profile">
@@ -44,36 +30,140 @@
             </swiper>
           </div>
         </div>
+        <div v-if="tabVal == 2">
+        <div class="profileTitle">发展轨迹</div>
+        <Row style="margin:30px 0 80px 0">
+          <Col span="3">
+          <div class="Circle greenC">
+            <div class="whiteCircle"></div>
+          </div>
+          <div class="VerticalLine"></div>
+          <div class="Circle yellowC">
+            <div class="whiteCircle"></div>
+          </div>
+          <div class="VerticalLine"></div>
+          <div class="Circle pinkC">
+            <div class="whiteCircle"></div>
+          </div>
+          <div class="VerticalLine"></div>
+          <div class="Circle purpleC">
+            <div class="whiteCircle"></div>
+          </div>
+          <div class="VerticalLine"></div>
+          <div class="Circle blueC">
+            <div class="whiteCircle"></div>
+          </div>
+          </Col>
+          <Col span="20">
+          <div class="years" style="margin-top: 0">2005 - 2008</div>
+          <div class="yearContent">提供美国Stratasys、3D Systems、Solidscape与以色列Objet公司的3D打印设备集成业务</div>
+          <div class="years">2009</div>
+          <div class="yearContent">成为德国EOS公司中国大陆地区重要战略合作伙伴</div>
+          <div class="years">2011</div>
+          <div class="yearContent">正式组建3D打印技术研发与打印服务团队并开始涉足3D打印服务领域</div>
+          <div class="years" style="margin-top: 32px">2013</div>
+          <div class="yearContent">建立了全国规模最大的高端3D打印服务平台，提供系统化的3D打印制造服务</div>
+          <div class="years" style="margin-top: 30px">2015</div>
+          <div class="yearContent">入驻漕河泾松江新兴产业园，占地4000平米的3D打印技术与服务中心投入使用</div>
+          </Col>
+        </Row>
+      </div>
+        <div v-if="tabVal == 3">
+          <div class="profileTitle">企业理念</div>
+          <img src="./corporatePhilosophy.jpg" alt="" width="100%" height="472px" style="margin: -20px 0 100px 0">
+        </div>
+        <div v-if="tabVal == 4">
+          <div class="profileTitle">领导关怀</div>
+          <img src="./imgcare.jpg" alt="" width="100%" style="margin: -20px 0 100px 0">
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+  import leftMenu from 'components/leftMenu/leftMenu';
   export default {
     data() {
       return {
         notNextTick: true,
-        tabVal: 1,
         swiperOption: {
           autoplay: 3000,
           pagination: '.swiper-pagination'
         },
-        tabCode: parseInt(this.$route.query.page)
+        tabVal: parseInt(this.$route.query.page),
+        subMenu: '公司简介',
+        MenuList: {
+          title: '悦瑞三维',
+          list: [{
+            val: 1,
+            label: '公司简介'
+          }, {
+            val: 2,
+            label: '发展轨迹'
+          }, {
+            val: 3,
+            label: '企业理念'
+          }, {
+            val: 4,
+            label: '领导关怀'
+          }]
+        }
       };
     },
-    mounted() {
-      this.swiper.slideTo(3, 1000, false);
-    },
-    methods: {
-      switchTab(tab) {
-        this.tabVal = tab;
-      }
+    components: {
+      leftMenu
     }
   };
 </script>
 
 <style scoped>
+  .subBread {
+    font-size: 14px;
+    color: #ADBACB;
+  }
+  .Circle {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    padding: 11px;
+  }
+  .VerticalLine {
+    margin-left: 21px;
+    width: 10px;
+    height: 50px;
+    background: #E5E5E5;
+  }
+  .years {
+    margin-top: 25px;
+    font-size: 36px;
+    color: #39475A;
+  }
+  .yearContent {
+    font-size: 14px;
+    color: #7E93AE;
+  }
+  .greenC {
+    background-image: linear-gradient(-170deg, #B7F23C 0%, #67C55F 100%);
+  }
+  .yellowC {
+    background-image: linear-gradient(-170deg, #F8BB35 0%, #F68D40 100%);
+  }
+  .pinkC {
+    background-image: linear-gradient(-170deg, #FFA49E 0%, #F80686 100%);
+  }
+  .purpleC {
+    background-image: linear-gradient(-170deg, #D86599 0%, #9E35A0 100%);
+  }
+  .blueC {
+    background-image: linear-gradient(-170deg, #28E8CC 0%, #29B4D2 100%);
+  }
+  .whiteCircle {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
   .swiperBox {
     margin-top: 51px;
     margin-bottom: 30px;
@@ -81,66 +171,10 @@
     border: 1px solid #D8DDE6;
     border-radius: 3px;
   }
-  .rightContent {
-    margin-top: 20px;
-    margin-left: 312px;
-  }
-  .profileTitle {
-    font-size: 36px;
-    color: #39475A;
-    margin: 10px 0;
-  }
   .profile {
     font-size: 14px;
     color: #7E93AE;
     line-height: 22px;
-  }
-  .bread {
-    font-size: 14px;
-    color: #566C89;
-  }
-  .leftMenu {
-    position: absolute;
-    border-radius: 3px;
-    z-index: 12;
-    width: 272px;
-    background: #FFFFFF;
-    margin-top: -75px;
-    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.05), 0 1px 1px 0 rgba(0,0,0,0.10);
-  }
-  .subMenu {
-    padding: 10px 15px;
-    font-size: 20px;
-  }
-  .rightIcon {
-    display: none;
-    margin-left: 140px;
-  }
-  .activeIcon {
-    display: initial;
-    margin-left: 140px;
-  }
-  .subMenu:hover {
-    background: #F1F1F1;
-    cursor: pointer;
-  }
-  .subMenu:hover  span.rightIcon {
-    display: initial;
-  }
-  .isSelected {
-    background: #F1F1F1;
-    cursor: pointer;
-  }
-  ._active {
-    padding: 10px 15px;
-    font-size: 20px;
-    color: #FFFFFF;
-    background: #DB352F;
-  }
-  .mainContent {
-    position: relative;
-    width: 1150px;
-    margin: auto;
   }
   li {
     list-style: initial !important;
