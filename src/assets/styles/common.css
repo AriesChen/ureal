@@ -8,6 +8,10 @@
   border: 1px solid #D7DDE6;
   border-radius: 3px;
 }
+.subBread {
+  font-size: 14px;
+  color: #ADBACB;
+}
 .rightContent {
   margin-top: 20px;
   margin-left: 312px;
@@ -25,4 +29,36 @@
   position: relative;
   width: 1150px;
   margin: auto;
+}
+.ivu-page-item {
+  background: #ECF3FE !important;
+  border: none;
+}
+.ivu-page-item-active {
+  background: #2978F5 !important;
+  border-radius: 3px !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+.ivu-page-item-jump-prev {
+  background: #ECF3FE !important;
+  border: none;
+}
+.ivu-page-item-jump-next {
+  background: #ECF3FE !important;
+  border: none;
+}
+.ivu-page-prev {
+  background: #ECF3FE !important;
+  border: none;
+}
+.ivu-page-next {
+  background: #ECF3FE !important;
+  border: none;
+}
+.ivu-page-disabled {
+  background: #F2F5F8 !important;
+}
+.anchorBL{
+  display:none;
 }

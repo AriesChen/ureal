@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="./bg2.png" alt="" width="100%">
+    <img src="./img/bg2.jpg" alt="" width="100%">
     <div class="mainContent">
       <left-menu :MenuList="MenuList"></left-menu>
       <div class="rightContent">
@@ -12,7 +12,7 @@
           <Row :gutter="26">
             <Col span="12">
               <div class="deviceBox">
-                <img src="./device1.png" alt="" width="100%">
+                <img src="./img/device1.jpg" alt="" width="100%">
                 <div class="deviceContent">
                   <div class="deviceName">EOSINT M290</div>
                   <div class="deviceDes">
@@ -24,7 +24,7 @@
             </Col>
             <Col span="12">
             <div class="deviceBox">
-              <img src="./device1.png" alt="" width="100%">
+              <img src="./img/device1.jpg" alt="" width="100%">
               <div class="deviceContent">
                 <div class="deviceName">EOSINT M290</div>
                 <div class="deviceDes">
@@ -38,7 +38,7 @@
           <Row :gutter="26">
             <Col span="12">
             <div class="deviceBox">
-              <img src="./device1.png" alt="" width="100%">
+              <img src="./img/device1.jpg" alt="" width="100%">
               <div class="deviceContent">
                 <div class="deviceName">EOSINT M290</div>
                 <div class="deviceDes">
@@ -50,7 +50,7 @@
             </Col>
             <Col span="12">
             <div class="deviceBox">
-              <img src="./device1.png" alt="" width="100%">
+              <img src="./img/device1.jpg" alt="" width="100%">
               <div class="deviceContent">
                 <div class="deviceName">EOSINT M290</div>
                 <div class="deviceDes">
@@ -64,7 +64,7 @@
           <Row :gutter="26">
             <Col span="12">
             <div class="deviceBox">
-              <img src="./device1.png" alt="" width="100%">
+              <img src="./img/device1.jpg" alt="" width="100%">
               <div class="deviceContent">
                 <div class="deviceName">EOSINT M290</div>
                 <div class="deviceDes">
@@ -76,7 +76,7 @@
             </Col>
             <Col span="12">
             <div class="deviceBox">
-              <img src="./device1.png" alt="" width="100%">
+              <img src="./img/device1.jpg" alt="" width="100%">
               <div class="deviceContent">
                 <div class="deviceName">EOSINT M290</div>
                 <div class="deviceDes">
@@ -93,9 +93,9 @@
           <div class="solutionDes">
             悦瑞三维致力于通过技术整合的方式为客户提供一站式的3D打印系统整合解决方案
           </div>
-          <img src="./liuchen.png" alt="" width="100%" style="margin-top: 20px">
-          <img src="./solution.jpg" alt="" width="100%" style="margin: 40px 0 20px 0">
-          <img src="./liuchen2.png" alt="" width="100%" style="margin-bottom: 40px">
+          <img src="./img/liuchen.jpg" alt="" width="100%" style="margin-top: 20px">
+          <img src="./img/solution.jpg" alt="" width="100%" style="margin: 40px 0 20px 0">
+          <img src="./img/liuchen2.jpg" alt="" width="100%" style="margin-bottom: 40px">
         </div>
         <div v-if="tabVal == 'details'">
           <device-detail></device-detail>

@@ -75,8 +75,8 @@
              @mouseover="toggleMenu('showMenu8')" @mouseout="toggleMenu('showMenu8')">联系我们
         <div :class="{subItems:showMenu8}" >
           <div v-if="showMenu8" class="subContent">
-            <div class="subMenu">联系我们</div>
-            <div class="subMenu">加入我们</div>
+            <div class="subMenu" @click.stop.prevent="selectRouter('contactUs', 1)">联系我们</div>
+            <div class="subMenu" @click.stop.prevent="selectRouter('contactUs', 1)">加入我们</div>
           </div>
         </div>
       </div>

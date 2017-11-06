@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="./bg3.png" alt="" width="100%">
+    <img src="./img/bg3.jpg" alt="" width="100%">
     <div class="mainContent">
       <left-menu :MenuList="MenuList"></left-menu>
       <div class="rightContent">
@@ -12,7 +12,7 @@
         </div>
         <div v-if="tabVal == 2">
           <div class="profileTitle">服务流程与内容</div>
-          <img src="./detail.png" alt="" width="100%">
+          <img src="./img/detail.jpg" alt="" width="100%">
         </div>
         <div v-if="tabVal == 3" style="margin-bottom: 100px">
           <div class="profileTitle">应用与案例</div>
@@ -38,7 +38,7 @@
           <div v-if="activeTab1" style="margin-top: 32px">
             <Row :gutter="23">
               <Col span="10">
-                <img src="./app_3.jpg" alt="" width="100%">
+                <img src="./img/app_3.jpg" alt="" width="100%">
               </Col>
               <Col span="14">
                 <div class="contentText">

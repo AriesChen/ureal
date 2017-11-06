@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="./bg.png" alt="" width="100%">
+    <img src="./img/bg.jpg" alt="" width="100%">
     <div class="mainContent">
       <left-menu :MenuList="MenuList"></left-menu>
       <div class="rightContent">
@@ -23,9 +23,9 @@
           </div>
           <div class="swiperBox">
             <swiper :options="swiperOption" :not-next-tick="notNextTick" ref="mySwiper">
-              <swiper-slide><img src="./intr.jpg" alt="" width="100%" height="440px"></swiper-slide>
-              <swiper-slide><img src="./intr2.jpg" alt="" width="100%" height="440px"></swiper-slide>
-              <swiper-slide><img src="./intr3.jpg" alt="" width="100%" height="440px"></swiper-slide>
+              <swiper-slide><img src="./img/intr.jpg" alt="" width="100%" height="440px"></swiper-slide>
+              <swiper-slide><img src="./img/intr2.jpg" alt="" width="100%" height="440px"></swiper-slide>
+              <swiper-slide><img src="./img/intr3.jpg" alt="" width="100%" height="440px"></swiper-slide>
               <div class="swiper-pagination"  slot="pagination"></div>
             </swiper>
           </div>
@@ -70,11 +70,11 @@
       </div>
         <div v-if="tabVal == 3">
           <div class="profileTitle">企业理念</div>
-          <img src="./corporatePhilosophy.jpg" alt="" width="100%" height="472px" style="margin: -20px 0 100px 0">
+          <img src="./img/corporatePhilosophy.jpg" alt="" width="100%" height="472px" style="margin: -20px 0 100px 0">
         </div>
         <div v-if="tabVal == 4">
           <div class="profileTitle">领导关怀</div>
-          <img src="./imgcare.jpg" alt="" width="100%" style="margin: -20px 0 100px 0">
+          <img src="./img/imgcare.jpg" alt="" width="100%" style="margin: -20px 0 100px 0">
         </div>
       </div>
     </div>

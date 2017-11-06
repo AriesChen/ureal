@@ -66,16 +66,7 @@
           <div class="profileTitle">市场活动</div>
           <div class="newsBox"></div>
         </div>
-        <div class="pageBtns">
-          <Row :gutter="10">
-            <Col span="2">
-              <div class="page-back"><Icon type="ios-arrow-left"></Icon> Back</div>
-            </Col>
-            <Col span="1">
-              <div class="page-back">Next <Icon type="ios-arrow-right"></Icon> </div>
-            </Col>
-          </Row>
-        </div>
+        <Page :total="100" style="margin-bottom: 50px"></Page>
       </div>
     </div>
   </div>
@@ -113,20 +104,6 @@
 </script>
 
 <style scoped>
-  .pageBtns {
-    margin-bottom: 40px;
-  }
-  .page-back {
-    cursor: pointer;
-    background: #F2F5F8;
-    border-radius: 3px;
-    width: 66px;
-    height: 30px;
-    text-align: center;
-    padding: 4px;
-    font-size: 16px;
-    color: #DCE1E9;
-  }
   .newsTime {
     padding-top: 15px;
     font-size: 14px;

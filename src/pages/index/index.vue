@@ -2,8 +2,8 @@
   <div style="margin-top: 72px;">
     <swiper :options="swiperOption" :not-next-tick="notNextTick" ref="mySwiper">
       <!-- slides -->
-      <swiper-slide><img src="./bg-big.png" alt="" width="100%" height="473px"></swiper-slide>
-      <swiper-slide><img src="./bg-big.png" alt="" width="100%" height="473px"></swiper-slide>
+      <swiper-slide><img src="./img/bg.jpg" alt="" width="100%" height="473px"></swiper-slide>
+      <swiper-slide><img src="./img/bg.jpg" alt="" width="100%" height="473px"></swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -16,7 +16,7 @@
             <div class="tabItem" :class="{activeTab: activeTab1}" @click="switchTab('tab1')">
               <Row>
                 <Col span="8">
-                <img src="./brain.png" alt="" style="margin-top: 10px">
+                <img src="./img/brain.png" alt="" style="margin-top: 10px">
                 </Col>
                 <Col span="16">
                   <div class="tabTitle">系统集成</div>
@@ -30,7 +30,7 @@
             <div class="tabItem" :class="{activeTab: activeTab2}" @click="switchTab('tab2')">
               <Row>
                 <Col span="8">
-                <img src="./nuclear.png" alt="" style="margin-top: 10px">
+                <img src="./img/nuclear.png" alt="" style="margin-top: 10px">
                 </Col>
                 <Col span="16">
                 <div class="tabTitle">行业应用</div>
@@ -44,7 +44,7 @@
             <div class="tabItem" :class="{activeTab: activeTab3}" @click="switchTab('tab3')">
               <Row>
                 <Col span="8">
-                <img src="./newspaper.png" alt="" style="margin-top: 10px">
+                <img src="./img/newspaper.png" alt="" style="margin-top: 10px">
                 </Col>
                 <Col span="16">
                 <div class="tabTitle">悦瑞新闻</div>
@@ -63,7 +63,7 @@
             <Col span="14">
             <Row>
               <Col span="10">
-              <img src="./device1.jpg" alt="" width="219px" height="123px">
+              <img src="./img/device1.jpg" alt="" width="219px" height="123px">
               </Col>
               <Col span="14">
               <div class="deviceText" style="margin-top: -5px">
@@ -74,7 +74,7 @@
             </Row>
             <Row style="margin-top: 42px">
               <Col span="10">
-              <img src="./news1.jpg" alt="" width="219px" height="123px">
+              <img src="./img/news1.jpg" alt="" width="219px" height="123px">
               </Col>
               <Col span="14">
               <div class="deviceText" style="margin-top: -5px">
@@ -102,7 +102,7 @@
             <swiper-slide>
               <Row>
                 <Col span="8">
-                <img src="./EOS.jpg" alt="" width="314px" height="117px" style="margin-left: 35px">
+                <img src="./img/EOS.jpg" alt="" width="314px" height="117px" style="margin-left: 35px">
                 <div class="sTitle2">EOS 设备</div>
                 <div class="sContent2">选择性激光烧结技术：预先在工作台上铺一层粉末材料（金属粉末或非金属粉末），
                   激光在计算机控制下，按照界面轮廓信息，对实心部分粉末进行烧结，然后不断循环，层层堆积成型。
@@ -110,7 +110,7 @@
                 <div class="detailBtn" style="margin: 30px auto 48px auto">查看详情</div>
                 </Col>
                 <Col span="8">
-                <img src="./DMT.jpg" alt="" width="314px" height="117px" style="margin-left: 35px">
+                <img src="./img/EOS.jpg" alt="" width="314px" height="117px" style="margin-left: 35px">
                 <div class="sTitle2">DMT设备</div>
                 <div class="sContent2">直接能量沉积技术：由激光在沉积区域产生熔池并高速移动，
                   材料以粉末或丝状直接送入高温熔池，熔化后逐层沉积，进而成形。
@@ -118,7 +118,7 @@
                 <div class="detailBtn" style="margin: 50px auto 48px auto">查看详情</div>
                 </Col>
                 <Col span="8">
-                <img src="./weiPrint.jpg" alt="" width="314px" height="117px" style="margin-left: 35px">
+                <img src="./img/weiPrint.jpg" alt="" width="314px" height="117px" style="margin-left: 35px">
                 <div class="sTitle2">微打印设备</div>
                 <div class="sContent2">微型激光烧结技术：微型激光烧结技术是一种基于粉末床的增材制造技术，
                   通常称为选择性激光烧结或选择性激光熔化。
@@ -139,19 +139,19 @@
             <swiper-slide>
               <Row>
                 <Col span="8" style="text-align: center">
-                <img src="./factory.png" alt="" width="59px" height="61px">
+                <img src="./img/factory.png" alt="" width="59px" height="61px">
                 <div class="sTitle">工业</div>
                 <div class="sContent">优化产品结构与性能，降低传统制造业生产成本</div>
                 <div class="detailBtn" style="margin: 39px auto 100px auto">查看详情</div>
                 </Col>
                 <Col span="8" style="text-align: center">
-                <img src="./kalashnikov.png" alt="" width="59px" height="61px">
+                <img src="./img/kalashnikov.png" alt="" width="59px" height="61px">
                 <div class="sTitle">军工</div>
                 <div class="sContent">复杂结构设计，轻量化零件，大幅节省能耗</div>
                 <div class="detailBtn" style="margin: 39px auto 100px auto">查看详情</div>
                 </Col>
                 <Col span="8" style="text-align: center">
-                <img src="./tomography.png" alt="" width="59px" height="61px">
+                <img src="./img/tomography.png" alt="" width="59px" height="61px">
                 <div class="sTitle">医疗</div>
                 <div class="sContent">个性化结构设计，规模定制化医疗服务</div>
                 <div class="swiperBtn"></div>
@@ -167,7 +167,7 @@
       <div class="companyProfile">
         <Row>
           <Col span="7">
-            <img src="./building.jpg" alt="" height="160px" width="285px">
+            <img src="./img/building.jpg" alt="" height="160px" width="285px">
           </Col>
           <Col span="17">
             <div class="intrTitle">公司介绍 | Company Profile</div>

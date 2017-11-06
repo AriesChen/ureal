@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="./bg5.png" alt="" width="100%">
+    <img src="./img/bg5.jpg" alt="" width="100%">
     <div class="mainContent">
       <left-menu :MenuList="MenuList"></left-menu>
       <div class="rightContent">
@@ -9,7 +9,7 @@
         </div>
         <div v-if="tabVal == 1">
           <div class="profileTitle">合作伙伴</div>
-          <img src="./hezuohuoban.jpg" alt="" width="100%" style="margin-bottom: 60px">
+          <img src="./img/hezuohuoban.jpg" alt="" width="100%" style="margin-bottom: 60px">
         </div>
         <div v-if="tabVal == 2">
           <div class="profileTitle">知名客户</div>

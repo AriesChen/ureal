@@ -4,6 +4,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import iView from 'iview';
+import BaiduMap from 'vue-baidu-map';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'iview/dist/styles/iview.css';
 import 'swiper/dist/css/swiper.css';
@@ -14,7 +15,9 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(iView);
 Vue.use(VueAwesomeSwiper);
-
+Vue.use(BaiduMap, {
+  ak: 'FftBBGSXjxULed04yMxyM9Wk'
+});
 const routes = [
   {path: '/', redirect: '/index'},
   {path: '/index', component: resolve => require(['pages/index/index'], resolve)},

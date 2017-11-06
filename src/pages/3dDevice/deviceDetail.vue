@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="profileTitle">设备详情</div>
-    <img src="./device1.png" alt="" width="100%">
+    <img src="./img/device1.jpg" alt="" width="100%">
     <div class="detailName">EOSINT M290</div>
     <div class="line"></div>
     <div class="detail">

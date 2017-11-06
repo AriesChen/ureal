@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="./bg4.png" alt="" width="100%">
+    <img src="./img/bg4.jpg" alt="" width="100%">
     <div class="mainContent">
       <left-menu :MenuList="MenuList"></left-menu>
       <div class="rightContent">
