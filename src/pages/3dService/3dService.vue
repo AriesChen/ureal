@@ -12,7 +12,22 @@
         </div>
         <div v-if="tabVal == 2">
           <div class="profileTitle">服务流程与内容</div>
-          <img src="./img/detail.jpg" alt="" width="100%">
+          <div class="processTitle">流程示意图</div>
+          <div class="subTitle">Process</div>
+          <div class="proContent">
+            作为专业的3D打印技术应用解决方案提供商，
+            我们长期致力于工业级3D打印技术在每个行业的创新应用开发客户只需提出一个想法或创意，
+            我们即可提供基于3D打印技术的从设计、数据、制造、后处理直至最终产品交付的一站式解决方案，
+            帮助客户最大程度的节约时间与成本
+          </div>
+          <ul class="process">
+            <li style="margin-left: 20px">设计咨询</li>
+            <li style="margin-left: 240px">数据优化</li>
+            <li style="margin-left: 460px">快速制造</li>
+            <li style="margin-left: 683px">后期处理</li>
+          </ul>
+          <!--<img src="./img/img2.jpg" alt="" width="100%">-->
+          <div class="proName">设计咨询</div>
         </div>
         <div v-if="tabVal == 3" style="margin-bottom: 100px">
           <div class="profileTitle">应用与案例</div>
@@ -111,6 +126,40 @@
 </script>
 
 <style scoped>
+  ul.process {
+    background: url("./img/img2.jpg");
+    width: 838px;
+    height: 300px;
+    background-repeat: round;
+    position: relative;
+  }
+  ul.process li {
+    position: absolute;
+    top: 50px;
+    width: 130px;
+    font: 22px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .proName {
+    /*margin-top: -200px;*/
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  .proContent {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #7E93AE;
+  }
+  .subTitle {
+    font-size: 12px;
+    color: #cccccc;
+  }
+  .processTitle {
+    color: #DB352F;
+    font-size: 18px;
+    font-weight: 700;
+  }
   li {
     font-size: 14px;
     color: #7E93AE;

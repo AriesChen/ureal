@@ -93,9 +93,104 @@
           <div class="solutionDes">
             悦瑞三维致力于通过技术整合的方式为客户提供一站式的3D打印系统整合解决方案
           </div>
-          <img src="./img/liuchen.jpg" alt="" width="100%" style="margin-top: 20px">
-          <img src="./img/solution.jpg" alt="" width="100%" style="margin: 40px 0 20px 0">
-          <img src="./img/liuchen2.jpg" alt="" width="100%" style="margin-bottom: 40px">
+          <Row style="margin: 30px 0">
+            <Col span="4">
+              <img src="./img/bg.png" alt="" width="120">
+              <div class="insideContent">
+                <img src="./img/i_1.png" alt="">
+                <div>技术咨询</div>
+              </div>
+            </Col>
+            <Col span="4">
+            <img src="./img/bg.png" alt="" width="120">
+            <div class="insideContent">
+              <img src="./img/i_2.png" alt="">
+              <div>建设规划</div>
+            </div>
+            </Col>
+            <Col span="4">
+            <img src="./img/bg.png" alt="" width="120">
+            <div class="insideContent">
+              <img src="./img/i_3.png" alt="">
+              <div>技术培训</div>
+            </div>
+            </Col>
+            <Col span="4">
+            <img src="./img/bg.png" alt="" width="120">
+            <div class="insideContent">
+              <img src="./img/i_4.png" alt="">
+              <div style="margin-top: 5px">设备硬件</div>
+            </div>
+            </Col>
+            <Col span="4">
+            <img src="./img/bg.png" alt="" width="120">
+            <div class="insideContent">
+              <img src="./img/i_5.png" alt="">
+              <div style="margin-top: 12px">安装维护</div>
+            </div>
+            </Col>
+            <Col span="4">
+            <img src="./img/bg.png" alt="" width="120">
+            <div class="insideContent">
+              <img src="./img/i_6.png" alt="">
+              <div>现场指导</div>
+            </div>
+            </Col>
+
+          </Row>
+          <img src="./img/img.jpg" alt="" width="100%" style="margin: 40px 0">
+          <Row class="bottomRow">
+            <Col span="12">
+              <Row>
+                <Col span="5">
+                  <div class="redC">经验</div>
+                </Col>
+                <Col span="16">
+                  <div class="ContentC">
+                    10年以上快速成型行业经验，10年以上团队合作经验，10余年国外先进设备销售与技术服务经验
+                  </div>
+                  </Col>
+              </Row>
+            </Col>
+            <Col span="12">
+            <Row>
+              <Col span="5">
+              <div class="redC">资源</div>
+              </Col>
+              <Col span="16">
+              <div class="ContentC">
+                设备、软件、设计、后处理等产业链资源国外最新的技术、材料以及应用等信息资源
+              </div>
+              </Col>
+            </Row>
+            </Col>
+          </Row>
+          <Row class="bottomRow">
+            <Col span="12">
+            <Row>
+              <Col span="5">
+              <div class="redC">成本</div>
+              </Col>
+              <Col span="16">
+              <div class="ContentC">
+                与设备商关系密切，设备及材料采购成本低精通制造工艺及配方，加工制造成本低
+              </div>
+              </Col>
+            </Row>
+            </Col>
+            <Col span="12">
+            <Row>
+              <Col span="5">
+              <div class="redC">技术</div>
+              </Col>
+              <Col span="16">
+              <div class="ContentC">
+                工业级快速成型设备，制造技术全球领先出色的设计优化、设备操作以及质量控制能力
+              </div>
+              </Col>
+            </Row>
+            </Col>
+          </Row>
         </div>
         <div v-if="tabVal == 'details'">
           <device-detail></device-detail>
@@ -141,8 +236,32 @@
 </script>
 
 <style scoped>
-  .solutionDes {
+  .bottomRow {
+    margin: 20px 60px 40px 60px;
+    border-bottom: 1px dashed #cccccc;
+    padding-bottom: 20px;
+  }
+  .ContentC {
+    font-size: 15px;
+    color: #7E93AE;
+  }
+  .redC {
+    background: #DB352F;
+    color: #FFFFFF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
     font-size: 20px;
+    padding-top:15px;
+  }
+  .insideContent {
+    margin: -90px 0 0 -20px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .solutionDes {
+    font-size: 18px;
     color: #7E93AE;
   }
   .deviceContent {

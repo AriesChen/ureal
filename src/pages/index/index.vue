@@ -227,9 +227,6 @@
       showDetail() {
         console.log('123');
       }
-    },
-    mounted() {
-      this.swiper.slideTo(3, 1000, false);
     }
   };
 </script>

@@ -30,6 +30,7 @@
     },
     methods: {
       switchTab(menu) {
+        this.tabVal = menu.val;
         this.$parent.tabVal = menu.val;
         this.$parent.subMenu = menu.label;
       }
