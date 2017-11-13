@@ -9,7 +9,8 @@
         </div>
         <div v-if="tabVal == 1">
           <div class="profileTitle">金属粉末材料</div>
-          <div class="contentBox"></div>
+          <div class="contentBox">
+          </div>
           <div class="contentBox"></div>
         </div>
         <div v-if="tabVal == 2">

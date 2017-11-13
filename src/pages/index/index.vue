@@ -59,7 +59,7 @@
       <div class="tabContent">
         <!--悦瑞新闻-->
         <div style="padding: 65px 90px 0 50px;" v-if="activeTab3">
-          <Row gutter="30">
+          <Row :gutter="30">
             <Col span="14">
             <Row>
               <Col span="10">
@@ -102,7 +102,7 @@
             <swiper-slide>
               <Row>
                 <Col span="8">
-                <img src="./img/EOS.jpg" alt="" width="314px" height="117px" style="margin-left: 35px">
+                <img src="./img/EOS.jpg" alt="" width="314px" height="162px" style="margin-left: 35px">
                 <div class="sTitle2">EOS 设备</div>
                 <div class="sContent2">选择性激光烧结技术：预先在工作台上铺一层粉末材料（金属粉末或非金属粉末），
                   激光在计算机控制下，按照界面轮廓信息，对实心部分粉末进行烧结，然后不断循环，层层堆积成型。
@@ -110,7 +110,7 @@
                 <div class="detailBtn" style="margin: 30px auto 48px auto">查看详情</div>
                 </Col>
                 <Col span="8">
-                <img src="./img/EOS.jpg" alt="" width="314px" height="117px" style="margin-left: 35px">
+                <img src="./img/EOS.jpg" alt="" width="314px" height="162px" style="margin-left: 35px">
                 <div class="sTitle2">DMT设备</div>
                 <div class="sContent2">直接能量沉积技术：由激光在沉积区域产生熔池并高速移动，
                   材料以粉末或丝状直接送入高温熔池，熔化后逐层沉积，进而成形。
@@ -118,7 +118,7 @@
                 <div class="detailBtn" style="margin: 50px auto 48px auto">查看详情</div>
                 </Col>
                 <Col span="8">
-                <img src="./img/weiPrint.jpg" alt="" width="314px" height="117px" style="margin-left: 35px">
+                <img src="./img/weiPrint.jpg" alt="" width="314px" height="162px" style="margin-left: 35px">
                 <div class="sTitle2">微打印设备</div>
                 <div class="sContent2">微型激光烧结技术：微型激光烧结技术是一种基于粉末床的增材制造技术，
                   通常称为选择性激光烧结或选择性激光熔化。
@@ -128,7 +128,7 @@
                 </Col>
               </Row>
             </swiper-slide>
-            <div class="swiper-pagination"  slot="pagination"></div>
+            <!--<div class="swiper-pagination"  slot="pagination"></div>-->
           </swiper>
         </div>
         <!--系统集成-->

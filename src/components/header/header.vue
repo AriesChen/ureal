@@ -1,13 +1,13 @@
 <template>
   <div class="headerContainer">
     <div class="headerBody">
-      <div class="logo">
+      <div class="logo" @click.stop.prevent="selectRouter('index')">
         <img src="./img/logo.png" style="width: 156px;height: 21px">
       </div>
       <div class="menu">
         <ul id="nav">
           <li><a class="item" :class="{isActive:active.ureal3D}"
-               @click.stop.prevent="selectRouter('ureal3D', 1)">悦瑞三维 </a>
+               @click.stop.prevent="selectRouter('index')">悦瑞三维 </a>
             <ul>
               <li><a @click.stop.prevent="selectRouter('ureal3D', 1)">公司简介</a></li>
               <li><a @click.stop.prevent="selectRouter('ureal3D', 2)">发展轨迹</a></li>
@@ -187,6 +187,7 @@
     height: 10px;
   }
   .logo {
+    cursor: pointer;
     float: left;
     padding-top: 25px;
   }

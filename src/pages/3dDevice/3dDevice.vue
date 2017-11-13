@@ -4,13 +4,96 @@
     <div class="mainContent">
       <left-menu :MenuList="MenuList"></left-menu>
       <div class="rightContent">
-        <div class="bread">
+        <div class="bread" v-if="tabVal != 1">
           3D打印设备 &nbsp;&nbsp;/&nbsp;&nbsp; <span class="subBread">{{subMenu}}</span>
         </div>
+        <div class="bread" v-else>
+          3D打印设备 &nbsp;&nbsp;/&nbsp;&nbsp;
+          <span  @click="deviceList=true;deviceTypes=false;deviceDetail=false;" style="cursor: pointer"
+                 :class="{subBread:deviceList}">设备列表&nbsp;&nbsp;</span>
+          <span class="subBread" v-if="deviceTypes" :class="{subBread:deviceTypes}"
+            @click="deviceTypes=true;deviceDetail=false">/&nbsp;&nbsp;设备机型</span>
+          <span class="subBread" v-if="deviceDetail">/&nbsp;&nbsp;设备详情</span>
+        </div>
         <div v-if="tabVal == 1">
-          <div class="profileTitle">设备机型</div>
-          <Row :gutter="26">
-            <Col span="12">
+          <div v-if="deviceList">
+            <div class="profileTitle">设备列表</div>
+            <Row :gutter="30">
+              <Col span="12">
+                <div class="deviceBox2">
+                  <img src="./img/device.jpg" alt="" width="100%">
+                  <div class="deviceName">德国EOS——选择性激光烧结技术</div>
+                  <span class="rightIcon">
+                    <img src="static/img/right.png" alt="">
+                  </span>
+                </div>
+              </Col>
+              <Col span="12">
+                <div class="deviceBox2">
+                  <img src="./img/DMT.jpg" alt="" width="100%">
+                  <div class="deviceName">DMT——直接能量沉积技术</div>
+                    <span class="rightIcon">
+                      <img src="static/img/right.png" alt="">
+                    </span>
+                </div>
+              </Col>
+            </Row>
+            <Row :gutter="30">
+              <Col span="12">
+                <div class="deviceBox2">
+                  <img src="./img/microPrint.jpg" alt="" width="100%">
+                  <div class="deviceName">3D MicroPrint——微型激光烧结技术</div>
+                  <span class="rightIcon">
+                    <img src="static/img/right.png" alt="">
+                  </span>
+                </div>
+              </Col>
+              <Col span="12">
+                <div class="deviceBox2">
+                <img src="./img/norMetalPowder.jpg" alt="" width="100%">
+                <div class="deviceName">非金属粉末材料</div>
+                  <span class="rightIcon">
+                    <img src="static/img/right.png" alt="">
+                  </span>
+              </div>
+              </Col>
+            </Row>
+            <Row :gutter="30">
+              <Col span="12">
+                <div class="deviceBox2">
+                  <img src="./img/hp.jpg" alt="" width="100%">
+                  <div class="deviceName">惠普——多射流熔融技术</div>
+                  <span class="rightIcon">
+                    <img src="static/img/right.png" alt="">
+                  </span>
+                </div>
+              </Col>
+              <Col span="12">
+                <div class="deviceBox2">
+                  <img src="./img/metalPowder.jpg" alt="" width="100%">
+                  <div class="deviceName">金属粉末材料</div>
+                    <span class="rightIcon">
+                      <img src="static/img/right.png" alt="">
+                    </span>
+                </div>
+              </Col>
+            </Row>
+            <Row :gutter="30">
+              <Col span="12">
+                <div class="deviceBox2">
+                <img src="./img/EnvisionTEC.jpg" alt="" width="100%">
+                <div class="deviceName" @click="deviceList=false;deviceTypes=true">德国EnvisionTEC—3SP/Viridis 3D砂型打印</div>
+                  <span class="rightIcon">
+                    <img src="static/img/right.png" alt="">
+                  </span>
+              </div>
+              </Col>
+            </Row>
+          </div>
+          <div v-if="deviceTypes">
+            <div class="profileTitle">设备机型</div>
+            <Row :gutter="26">
+              <Col span="12">
               <div class="deviceBox">
                 <img src="./img/device1.jpg" alt="" width="100%">
                 <div class="deviceContent">
@@ -21,72 +104,76 @@
                   <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
                 </div>
               </div>
-            </Col>
-            <Col span="12">
-            <div class="deviceBox">
-              <img src="./img/device1.jpg" alt="" width="100%">
-              <div class="deviceContent">
-                <div class="deviceName">EOSINT M290</div>
-                <div class="deviceDes">
-                  M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+              </Col>
+              <Col span="12">
+              <div class="deviceBox">
+                <img src="./img/device1.jpg" alt="" width="100%">
+                <div class="deviceContent">
+                  <div class="deviceName">EOSINT M290</div>
+                  <div class="deviceDes">
+                    M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+                  </div>
+                  <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
                 </div>
-                <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
               </div>
-            </div>
-            </Col>
-          </Row>
-          <Row :gutter="26">
-            <Col span="12">
-            <div class="deviceBox">
-              <img src="./img/device1.jpg" alt="" width="100%">
-              <div class="deviceContent">
-                <div class="deviceName">EOSINT M290</div>
-                <div class="deviceDes">
-                  M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+              </Col>
+            </Row>
+            <Row :gutter="26">
+              <Col span="12">
+              <div class="deviceBox">
+                <img src="./img/device1.jpg" alt="" width="100%">
+                <div class="deviceContent">
+                  <div class="deviceName">EOSINT M290</div>
+                  <div class="deviceDes">
+                    M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+                  </div>
+                  <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
                 </div>
-                <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
               </div>
-            </div>
-            </Col>
-            <Col span="12">
-            <div class="deviceBox">
-              <img src="./img/device1.jpg" alt="" width="100%">
-              <div class="deviceContent">
-                <div class="deviceName">EOSINT M290</div>
-                <div class="deviceDes">
-                  M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+              </Col>
+              <Col span="12">
+              <div class="deviceBox">
+                <img src="./img/device1.jpg" alt="" width="100%">
+                <div class="deviceContent">
+                  <div class="deviceName">EOSINT M290</div>
+                  <div class="deviceDes">
+                    M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+                  </div>
+                  <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
                 </div>
-                <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
               </div>
-            </div>
-            </Col>
-          </Row>
-          <Row :gutter="26">
-            <Col span="12">
-            <div class="deviceBox">
-              <img src="./img/device1.jpg" alt="" width="100%">
-              <div class="deviceContent">
-                <div class="deviceName">EOSINT M290</div>
-                <div class="deviceDes">
-                  M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+              </Col>
+            </Row>
+            <Row :gutter="26">
+              <Col span="12">
+              <div class="deviceBox">
+                <img src="./img/device1.jpg" alt="" width="100%">
+                <div class="deviceContent">
+                  <div class="deviceName">EOSINT M290</div>
+                  <div class="deviceDes">
+                    M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+                  </div>
+                  <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
                 </div>
-                <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
               </div>
-            </div>
-            </Col>
-            <Col span="12">
-            <div class="deviceBox">
-              <img src="./img/device1.jpg" alt="" width="100%">
-              <div class="deviceContent">
-                <div class="deviceName">EOSINT M290</div>
-                <div class="deviceDes">
-                  M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+              </Col>
+              <Col span="12">
+              <div class="deviceBox">
+                <img src="./img/device1.jpg" alt="" width="100%">
+                <div class="deviceContent">
+                  <div class="deviceName">EOSINT M290</div>
+                  <div class="deviceDes">
+                    M290系统是M280系统的升级版本集成了EOS在激光粉末烧结领域多年的经验及该领域的最新技术
+                  </div>
+                  <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
                 </div>
-                <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
               </div>
-            </div>
-            </Col>
-          </Row>
+              </Col>
+            </Row>
+          </div>
+          <div v-if="deviceDetail">
+            <device-detail></device-detail>
+          </div>
         </div>
         <div v-if="tabVal == 2">
           <div class="profileTitle">解决方案</div>
@@ -96,14 +183,14 @@
           <Row style="margin: 30px 0">
             <Col span="4">
               <img src="./img/bg.png" alt="" width="120">
-              <div class="insideContent">
+              <div class="insideContent" style="margin-left: 10px">
                 <img src="./img/i_1.png" alt="">
                 <div>技术咨询</div>
               </div>
             </Col>
             <Col span="4">
             <img src="./img/bg.png" alt="" width="120">
-            <div class="insideContent">
+            <div class="insideContent"  style="margin-left: 7px">
               <img src="./img/i_2.png" alt="">
               <div>建设规划</div>
             </div>
@@ -192,9 +279,6 @@
             </Col>
           </Row>
         </div>
-        <div v-if="tabVal == 'details'">
-          <device-detail></device-detail>
-        </div>
       </div>
     </div>
   </div>
@@ -207,6 +291,9 @@
     data() {
       return {
         tabVal: parseInt(this.$route.query.page),
+        deviceList: true,
+        deviceTypes: false,
+        deviceDetail: false,
         subMenu: '设备列表',
         MenuList: {
           title: '3D打印设备',
@@ -225,7 +312,8 @@
     },
     methods: {
       showDetail() {
-        this.tabVal = 'details';
+        this.deviceTypes = false;
+        this.deviceDetail = true;
       }
     },
     components: {
@@ -236,6 +324,24 @@
 </script>
 
 <style scoped>
+  .rightIcon {
+    float: right;
+    margin-right: 20px;
+    margin-top: -40px;
+  }
+  .deviceName {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 18px;
+    color: #39475A;
+  }
+  .deviceBox2 {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #D8DDE6;
+    border-radius: 3px;
+    margin-bottom: 26px;
+  }
   .bottomRow {
     margin: 20px 60px 40px 60px;
     border-bottom: 1px dashed #cccccc;
