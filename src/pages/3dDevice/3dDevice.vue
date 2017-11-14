@@ -183,14 +183,14 @@
           <Row style="margin: 30px 0">
             <Col span="4">
               <img src="./img/bg.png" alt="" width="120">
-              <div class="insideContent" style="margin-left: 10px">
+              <div class="insideContent">
                 <img src="./img/i_1.png" alt="">
                 <div>技术咨询</div>
               </div>
             </Col>
             <Col span="4">
             <img src="./img/bg.png" alt="" width="120">
-            <div class="insideContent"  style="margin-left: 7px">
+            <div class="insideContent" >
               <img src="./img/i_2.png" alt="">
               <div>建设规划</div>
             </div>

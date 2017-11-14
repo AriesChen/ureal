@@ -117,7 +117,6 @@
     border-bottom: 1px solid #474747;
   }
   li {
-    list-style: initial !important;
     line-height: 25px;
   }
   .footer {

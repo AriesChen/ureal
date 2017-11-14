@@ -157,38 +157,34 @@
         <div v-if="tabVal == 3" style="margin-bottom: 100px">
           <div v-if="appAndCase">
             <div class="profileTitle">应用与案例</div>
-            <div class="topTab">
-              <div class="tabs">
-                <Row>
-                  <Col span="6">
-                    <div class="tabName" :class="{activeTab:activeTabModalMade}" @click="switchTab('ModalMade')">
-                      <i class="iconfont icon--led-lamp-infrare"></i>
-                      <div>模具制造</div>
-                    </div>
-                  </Col>
-                  <Col span="6">
-                    <div class="tabName" :class="{activeTab:activeTabQuickSample}" @click="switchTab('QuickSample')">
-                      <i class="iconfont icon--light-bulb-idea-"></i>
-                      <div>快速样件</div>
-                    </div>
-                  </Col>
-                  <Col span="6">
-                    <div class="tabName" :class="{activeTab:activeTabSBProduction}" @click="switchTab('SBProduction')">
-                      <i class="iconfont icon--honey-honeycomb-"></i>
-                      <div>小批量生产</div>
-                    </div>
-                  </Col>
-                  <Col span="6">
-                    <div class="tabName" :class="{activeTab:activeTabMoldMaking}" @click="switchTab('MoldMaking')">
-                      <i class="iconfont icon--web-internet-net"></i>
-                      <div>模型制作</div>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
+              <Row>
+                <Col span="6">
+                <div class="tabName" :class="{activeTab:activeTabModalMade}" @click="switchTab('ModalMade')">
+                  <i class="iconfont icon--led-lamp-infrare"></i>
+                  <div>模具制造</div>
+                </div>
+                </Col>
+                <Col span="6">
+                <div class="tabName" :class="{activeTab:activeTabQuickSample}" @click="switchTab('QuickSample')">
+                  <i class="iconfont icon--light-bulb-idea-"></i>
+                  <div>快速样件</div>
+                </div>
+                </Col>
+                <Col span="6">
+                <div class="tabName" :class="{activeTab:activeTabSBProduction}" @click="switchTab('SBProduction')">
+                  <i class="iconfont icon--honey-honeycomb-"></i>
+                  <div>小批量生产</div>
+                </div>
+                </Col>
+                <Col span="6">
+                <div class="tabName" :class="{activeTab:activeTabMoldMaking}" @click="switchTab('MoldMaking')">
+                  <i class="iconfont icon--web-internet-net"></i>
+                  <div>模型制作</div>
+                </div>
+                </Col>
+              </Row>
               <div class="tabLine"></div>
-            </div>
-            <div v-if="activeTab1" style="margin-top: 32px">
+            <div v-if="activeTabModalMade" style="margin-top: 32px">
               <Row :gutter="23">
                 <Col span="10">
                 <img src="./img/app_3.jpg" alt="" width="100%">
@@ -213,25 +209,53 @@
             </div>
           </div>
           <div v-if="isDetail" style="margin-top: 32px">
-            <div class="topTab">
-              <div class="tabs">
-                <Row>
-                  <Col span="4">
-                    <div class="tabName" :class="{activeTab:activeTab_1}" @click="switchTab('ModalMade')"> 汽车 </div>
-                  </Col>
-                  <Col span="4">
-                  <div class="tabName" :class="{activeTab:activeTab_2}" @click="switchTab('QuickSample')">模具</div>
-                  </Col>
-                  <Col span="4">
-                  <div class="tabName" :class="{activeTab:activeTab_3}" @click="switchTab('SBProduction')">航天航空</div>
-                  </Col>
-                  <Col span="4">
-                  <div class="tabName" :class="{activeTab:activeTab_4}" @click="switchTab('MoldMaking')">医疗</div>
-                  </Col>
-                </Row>
-              </div>
-              <div class="tabLine"></div>
-            </div>
+            <Row>
+                <Col span="3" class="span-3">
+                <div class="tabName" :class="{activeTab:activeTabCar}" @click="switchTab('Car')">
+                  <div style="padding: 13px 0 9px 0">
+                    <i class="iconfont icon--sedan-car" style="font-size: 30px"></i>
+                  </div>
+                  <div>汽车</div>
+                </div>
+                </Col>
+                <Col span="3" class="span-3">
+                <div class="tabName" :class="{activeTab:activeTabMold}" @click="switchTab('Mold')">
+                  <i class="iconfont icon--led-lamp-infrare"></i>
+                  <div>模具</div>
+                </div>
+                </Col>
+                <Col span="3" class="span-3">
+                <div class="tabName" :class="{activeTab:activeTabAerospace}" @click="switchTab('Aerospace')">
+                  <i class="iconfont icon-icon1"></i>
+                  <div>航天航空</div>
+                </div>
+                </Col>
+                <Col span="3" class="span-3">
+                <div class="tabName" :class="{activeTab:activeTabMedical}" @click="switchTab('Medical')">
+                  <i class="iconfont icon--hospital-bed-med"></i>
+                  <div>医疗</div>
+                </div>
+                </Col>
+                <Col span="3" class="span-3">
+                <div class="tabName" :class="{activeTab:activeTabCustomized}" @click="switchTab('Customized')">
+                  <i class="iconfont icon--author-creative-"></i>
+                  <div>个性化定制</div>
+                </div>
+                </Col>
+                <Col span="3" class="span-3">
+                <div class="tabName" :class="{activeTab:activeTabCProducts}" @click="switchTab('CProducts')">
+                  <i class="iconfont icon--nature-ecology-s"></i>
+                  <div>创意产品</div>
+                </div>
+                </Col>
+                <Col span="3" class="span-3">
+                <div class="tabName" :class="{activeTab:activeTabOthers}" @click="switchTab('Others')">
+                  <i class="iconfont icon--point-pointing-f"></i>
+                  <div>其他 </div>
+                </div>
+                </Col>
+          </Row>
+            <div class="tabLine"></div>
           </div>
         </div>
       </div>
@@ -250,13 +274,13 @@
         activeTabMoldMaking: false,
         appAndCase: true,
         isDetail: false,
-        activeTab_1: false,
-        activeTab_2: false,
-        activeTab_3: false,
-        activeTab_4: false,
-        activeTab_5: false,
-        activeTab_6: false,
-        activeTab_7: false,
+        activeTabCar: true,
+        activeTabMold: false,
+        activeTabAerospace: false,
+        activeTabMedical: false,
+        activeTabCustomized: false,
+        activeTabCProducts: false,
+        activeTabOthers: false,
         tabVal: parseInt(this.$route.query.page),
         subMenu: '解决方案',
         MenuList: {
@@ -274,19 +298,27 @@
         }
       };
     },
+    mounted() {
+      console.log(1111);
+    },
+    watch: {
+      tabVal(newVal) {
+        console.log(newVal);
+      }
+    },
     methods: {
       resetTabStat() {
         this.activeTabModalMade = false;
         this.activeTabQuickSample = false;
         this.activeTabSBProduction = false;
         this.activeTabMoldMaking = false;
-        this.activeTab_1 = false;
-        this.activeTab_2 = false;
-        this.activeTab_3 = false;
-        this.activeTab_4 = false;
-        this.activeTab_5 = false;
-        this.activeTab_6 = false;
-        this.activeTab_7 = false;
+        this.activeTabCar = false;
+        this.activeTabMold = false;
+        this.activeTabAerospace = false;
+        this.activeTabMedical = false;
+        this.activeTabCustomized = false;
+        this.activeTabCProducts = false;
+        this.activeTabOthers = false;
       },
       switchTab(tab) {
         this.resetTabStat();
@@ -407,12 +439,15 @@
     color: #2F3945;;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    border-right: 2px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
     /*margin-bottom: -2px;*/
     background: #F4F4F4;
   }
   .tabLine {
     width: 100%;
-    border-bottom: 1px solid #DB352F;
+    border-bottom: 2px solid #DB352F;
+  }
+  .span-3 {
+    width: 14.25% !important;
   }
 </style>

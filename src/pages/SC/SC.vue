@@ -13,6 +13,35 @@
         </div>
         <div v-if="tabVal == 2">
           <div class="profileTitle">知名客户</div>
+            <Row>
+              <Col span="6">
+              <div class="tabName" :class="{activeTab:activeTabCar}" @click="switchTab('Car')">
+                <div style="padding: 13px 0 9px 0">
+                  <i class="iconfont icon--sedan-car" style="font-size: 30px"></i>
+                </div>
+                <div>汽车行业</div>
+              </div>
+              </Col>
+              <Col span="6">
+              <div class="tabName" :class="{activeTab:activeTabMold}" @click="switchTab('Mold')">
+                <i class="iconfont icon--led-lamp-infrare"></i>
+                <div>模具行业</div>
+              </div>
+              </Col>
+              <Col span="6">
+              <div class="tabName" :class="{activeTab:activeTabAerospace}" @click="switchTab('Aerospace')">
+                <i class="iconfont  icon-icon1"></i>
+                <div>航天行业</div>
+              </div>
+              </Col>
+              <Col span="6">
+              <div class="tabName" :class="{activeTab:activeTabOthers}" @click="switchTab('Others')">
+                <i class="iconfont icon--point-pointing-f"></i>
+                <div>其他行业</div>
+              </div>
+              </Col>
+            </Row>
+            <div class="tabLine"></div>
           <div class="contentBox"></div>
         </div>
       </div>
@@ -25,6 +54,10 @@
   export default {
     data() {
       return {
+        activeTabCar: true,
+        activeTabMold: false,
+        activeTabAerospace: false,
+        activeTabOthers: false,
         subMenu: '合作伙伴',
         tabVal: parseInt(this.$route.query.page),
         MenuList: {
@@ -38,6 +71,19 @@
           }]
         }
       };
+    },
+    methods: {
+      resetTabStat() {
+        this.activeTabCar = false;
+        this.activeTabMold = false;
+        this.activeTabAerospace = false;
+        this.activeTabOthers = false;
+      },
+      switchTab(tab) {
+        this.resetTabStat();
+        let name = `activeTab${tab}`;
+        this[name] = true;
+      }
     },
     components: {
       leftMenu
@@ -53,5 +99,30 @@
     height: 242px;
     padding: 27px;
     margin-bottom: 22px;
+  }
+  .activeTab {
+    color: #FFFFFF !important;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 0;
+    background-image: linear-gradient(-180deg, #FFB3AF 0%, #DB352F 100%) !important;
+    border-radius: 3px 3px 0 0;
+  }
+  .tabName {
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    height: 100px;
+    color: #2F3945;;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-right: 3px solid #FFFFFF;
+    /*margin-bottom: -2px;*/
+    background: #F4F4F4;
+  }
+  .tabLine {
+    width: 100%;
+    border-bottom: 2px solid #DB352F;
   }
 </style>
