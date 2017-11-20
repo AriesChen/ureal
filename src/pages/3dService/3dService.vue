@@ -190,6 +190,58 @@
                 <img src="./img/app_3.jpg" alt="" width="100%">
                 </Col>
                 <Col span="14">
+                  <div class="contentText">
+                    模具作为现在制造技术的一种重要手段，在汽车、电子、家电等批量化生产制造领域发挥着极其重要的作用。
+                    传统的模具制造工艺如数控加工、电火花、精密铸造等，长期以来一直被广泛使用。然而，
+                    随着产品质量要求的不断提高，传统制造工艺越来越难以满足高端精密模具（尤其是注塑模具和压铸模具）质量要求
+                  </div>
+                  <div class="contentText">
+                    由于3D打印技术在制造过程中不会受到产品内部结构及复杂形状的约束，
+                    通过在模具内部进行复杂的随形冷却水路设计与加工，3D打印技术可以轻松实现高端模具的生产制造，
+                    进而给最终产品的量产带来无可比拟的好处：
+                  </div>
+                </Col>
+              </Row>
+              <ul class="_ul">
+                <li>有效缩短注塑或压铸过程中的冷却时间，生产效率大幅提高</li>
+                <li>冷却更佳均匀，有效减少翘曲变形、开裂飞边、气泡砂眼等产品缺陷，显著提升最终产品的质量与成品率</li>
+                <li>模具使用寿命大大延长，产品单位成本降低</li>
+                <li>可采用工业级3D打印技术制造高端模具的行业包括：汽车零部件、电子产品、家用电器、日化品包装等</li>
+              </ul>
+              <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
+            </div>
+            <div v-if="activeTabQuickSample" style="margin-top: 32px">
+              <Row :gutter="23">
+                <Col span="10">
+                <img src="./img/app_3.jpg" alt="" width="100%">
+                </Col>
+                <Col span="14">
+                  <div class="contentText">
+                    在新产品研发阶段，我们可以借助3D打印技术，在最短时间内为您制造一套或几套快速原型样件，
+                    用于完成设计验证、装配测试、性能测试等重要工作，帮助您缩短研发周期，降低研发成本
+                  </div>
+                  <div class="contentText">
+                    相对于CNC、模具制造等传统制造工艺，3D打印技术在快速原型样件的制造过程中具有以下突出的优势：
+                  </div>
+                </Col>
+              </Row>
+              <ul class="_ul">
+                <li>仅需几个小时至几十个小时即可完成一套或几套原型样件的制造，产品研发周期可缩短40%以上</li>
+                <li>无需机加工、翻模或开模具，可直接打印快速原型样件，大大降低产品研发成本</li>
+                <li>尺寸精度可满足工业级装配要求，塑料样件尺寸精度可达±0.1mm，金属样件尺寸精度可达±20µm</li>
+                <li>塑料样件选用性能优异的尼龙12工程塑料材料，具有高强度、高韧性、耐磨、耐腐蚀、耐温等出色性能</li>
+                <li>快速样件可满足多种条件苛刻的测试要求，例如风洞试验（3000转/分钟），水压及流量测试（万次以上）</li>
+                <li>适合用3D打印技术制造快速样件的领域包括：汽车零部件、电子产品、家用电器、仪器仪表、医疗器械、
+                  电动工具、家具厨卫、运动用品、日化品包装等</li>
+              </ul>
+              <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
+            </div>
+            <div v-if="activeTabSBProduction" style="margin-top: 32px">
+              <Row :gutter="23">
+                <Col span="10">
+                <img src="./img/app_3.jpg" alt="" width="100%">
+                </Col>
+                <Col span="14">
                 <div class="contentText">
                   随着规模化制造技术的发展，大规模制造的成本与效率优势愈发明显。然而，针对几十件、
                   几百件乃至上千件的小批量制造需求，传统的制造手段如CNC、注塑、铸造等难以克服成本高、
@@ -198,12 +250,38 @@
                 </Col>
               </Row>
               <p class="desTitle">借助于选择性激光烧结（SLS）工业级3D打印技术，我们可以为您轻松实现产品的小批量生产制造：</p>
-              <ul style="margin-left: 20px">
+              <ul class="_ul">
                 <li>产品质量达到工业级应用等级，塑料产品接近于注塑水平，金属产品接近于锻件水平</li>
                 <li>无论是几件、几十件、几百件还是上千件，3D打印技术均可实现最柔性化的生产制造，且成本远低于传统制造工艺</li>
                 <li>3D打印技术可以轻松实现自由化的产品组合制造，多款产品、不同批量、一次生产、同时交货</li>
                 <li>可采用工业级3D打印技术进行小批量生产的领域包括：新产品小批量投放、设备及仪器零部件、
                   工装夹具、创意产品、个人消费品等</li>
+              </ul>
+              <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
+            </div>
+            <div v-if="activeTabMoldMaking" style="margin-top: 32px">
+              <Row :gutter="23">
+                <Col span="10">
+                <img src="./img/app_3.jpg" alt="" width="100%">
+                </Col>
+                <Col span="14">
+                <div class="contentText">
+                  借助3D打印技术，我们可以在最短时间内帮助您完成各种复杂模型的制作,并以最快的速度将模型交付至您手中
+                </div>
+                <div class="contentText">相对于传统手工等简易制作手段,3D打印技术在模型制作过程中可以充分发挥其独特的技术优势：</div>
+                </Col>
+              </Row>
+              <ul class="_ul">
+                <li>真正实现自由化的参数设计，无论何种设计均可轻松完成最终制作,彻底摆脱“制造决定设计”的束缚</li>
+                <li>无论结构多么复杂,均可完美展现所有细节,壁厚最薄可达0.5mm,最小孔径可达0.5mm,圆柱直径最小可达0.8mm</li>
+                <li>整体结构可一次成型,无需组装即可实现功能集成</li>
+                <li>整体结构可一次成型,无需组装即可实现功能集成</li>
+                <li>模型坚固且有韧性,便于运输</li>
+                <li>可通过喷漆、染色等多种后处理手段进行表面处理,以达到最逼真的展示效果</li>
+              </ul>
+              <p class="desTitle">我们可通过3D打印技术为您制作以下各类模型：</p>
+              <ul class="_ul">
+                <li>厂房设施模型、设备产品模型、艺术模型、玩具模型、建筑模型、医疗模型等</li>
               </ul>
               <div class="detailBtn" @click='showDetail' style="margin-top: 40px">查看详情</div>
             </div>
@@ -337,6 +415,13 @@
 </script>
 
 <style scoped>
+  ._ul {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  li {
+    line-height: 30px;
+  }
   ._white {
     color: #FFFFFF;
   }
@@ -420,6 +505,7 @@
   }
   .contentText {
     font-size: 14px;
+    margin-bottom: 20px;
     color: #7E93AE;
   }
   .activeTab {
