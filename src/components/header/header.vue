@@ -127,7 +127,7 @@
     width: 110px;
     height: 72px;
   }
-  #nav .item:hover {
+  #nav li:hover .item {
     background: #F1F1F1;
     box-shadow: inset 0 3px 0 0 #E84E4A;
   }
@@ -150,15 +150,16 @@
     background: #efefef;
   }
   #nav li ul a{
+    transition: color 0s ease;
     display: block;
     text-align:left;
     padding-left:24px;
     overflow:hidden
   }
   #nav li ul a:hover {
-    color:#FFFFFF;
-    font-weight:normal;
     background: #E84E4A;
+    color:#FFFFFF;
+    /*font-weight:normal;*/
   }
   #nav li ul:hover +.item {
     background: red;

@@ -3,7 +3,9 @@
     <swiper :options="swiperOption" :not-next-tick="notNextTick" ref="mySwiper">
       <!-- slides -->
       <swiper-slide><img src="./img/bg.jpg" alt="" width="100%" height="473px"></swiper-slide>
-      <swiper-slide><img src="./img/bg.jpg" alt="" width="100%" height="473px"></swiper-slide>
+      <swiper-slide><img src="./img/banner3.jpg" alt="" width="100%" height="473px"></swiper-slide>
+      <swiper-slide><img src="./img/banner4.jpg" alt="" width="100%" height="473px"></swiper-slide>
+      <swiper-slide><img src="./img/banner6.jpg" alt="" width="100%" height="473px"></swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
